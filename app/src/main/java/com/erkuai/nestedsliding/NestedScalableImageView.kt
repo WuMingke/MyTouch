@@ -17,6 +17,12 @@ import com.erkuai.mytouch.getAvatar
 private val IMAGE_SIZE = 300.dp.toInt()
 private const val EXTRA_SCALE_FACTOR = 1.5f
 
+
+/**
+ * 没必要看这个代码，
+ * 子View实现嵌套滑动，就实现 NestedScrollingChild3
+ * 父View实现嵌套滑动，就实现 NestedScrollingParent3
+ */
 class NestedScalableImageView(context: Context?, attrs: AttributeSet?) : View(context, attrs),
     NestedScrollingChild3 {
     private val paint = Paint(Paint.ANTI_ALIAS_FLAG)
