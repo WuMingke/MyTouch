@@ -22,6 +22,8 @@ private const val EXTRA_SCALE_FACTOR = 1.5f
  * 没必要看这个代码，
  * 子View实现嵌套滑动，就实现 NestedScrollingChild3
  * 父View实现嵌套滑动，就实现 NestedScrollingParent3
+ *
+ * // TODO: 2022/12/30 mingKE 这里需要知道原理
  */
 class NestedScalableImageView(context: Context?, attrs: AttributeSet?) : View(context, attrs),
     NestedScrollingChild3 {
