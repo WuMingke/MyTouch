@@ -1,0 +1,16 @@
+嵌套滑动分为两种
+    1、方向相同
+       （1）NestedScrollView 让子View优先拦截
+       （2）协调布局的那种
+                有两遍询问流程
+                首先问父View，要不要不顾子View抢先滑动？
+                父View回答完之后，再问子View，你的父View抢先滑动之后，如果还有剩余，那么你要不要也做一次优先滑动？
+                因为子View在第一次滑动之后，父View还有机会再去选择是否滑动，然后又问子View，这一次要不要滑动？
+                eg：先子View再父View的情况：
+                第一遍父View不说话，子View随便滑
+                子View滑完了，问父View，要不要滑，这时候父View滑动，子View不滑
+
+
+    2、方向不同
+        onInterceptTouchEvent
+        parent.requestDisallowInterceptTouchEvent(true) // 让父View不要拦截我

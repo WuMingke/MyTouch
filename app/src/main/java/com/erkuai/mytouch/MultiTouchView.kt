@@ -25,6 +25,8 @@ import android.view.View
  *      接力型
  *      配合型
  *      各自为战型
+ *
+ * 主要是记住几个api，已经3种类型的实现框架
  */
 class MultiTouchView(context: Context?, attrs: AttributeSet?) : View(context, attrs) {
 
